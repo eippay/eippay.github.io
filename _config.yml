@@ -1,7 +1,7 @@
 # ----
 # Site
 
-title: 简单博客
+title: 小白博客
 url: "https://long-pig.cloudvent.net"
 baseurl:
 google_analytics_key:
@@ -61,7 +61,7 @@ defaults:
         order: Used to sort links in the navigation
       _options:
         content:
-          width: 800
+          width: 900
           height: 2000
   -
     scope:
