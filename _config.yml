@@ -1,79 +1,75 @@
-# ----
-# Site
+# Basic
+title: 小白
+subtitle: 个人站
+description: 欢迎来到我的个人站~
+# 头像里面的标题
+avatarTitle: eippay
+# 头像里面的描述
+avatarDesc: 小白学习笔记
+url: "https://eippay.github.io"
 
-title: 小白博客
-url: "https://long-pig.cloudvent.net"
-baseurl:
-google_analytics_key:
-show_full_navigation: true
+# Comment
+comment:
+    disqus: leopard
+    # gitment: xxx // 需要修改 comments.html中的client_id和client_secret
+    # uyan: 2143225  # 有言id,登录有言官网申请
 
-# Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
-logo: /siteicon.png
-description: Product documentation template for Jekyll.
-author:
-  name:
-  email:
-  twitter: # twitter username without the @ symbol
+# Social
 social:
-  name: Edition Template
-  links:
-    - https://github.com/CloudCannon/edition-jekyll-template
+    weibo: 593204729 
+    github: eippay
+    # zhihu: panpanleopard
+    # juejin: xxx
+    jianshu: 2ada30d8d0f7
+    # twitter: 
+    mail: eippay@163.com
 
-# -----
-# Build
 
-timezone: Etc/UTC
+# 百度统计 
+# 使用博客模板请去掉或者更换 id 
+baidu:
+    id: 6899b9c5632226264a16aec0d9ec8421
 
-permalink: pretty
+# Google Analytics
+# 使用博客模板请去掉或者更换 id
+#ga:
+    #id: xxxx  
+    #    host: auto  
 
-plugins:
-  - jekyll-sitemap
-  - jekyll-seo-tag
-  - jekyll-feed
 
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - README.md
-  - LICENCE
+# 《----------------- 上面的信息修改成你自己的 ---------------------------》
+#
+#
+#  _post/ 下的文章更换成你自己的文章
+#  帮忙star一下，感谢~😆 地址： https://github.com/leopardpan/leopardpan.github.io
+#
+#
+# 《--------------- 下面的信息可以自行选择是否修改 ------------------------》
 
-collections:
-  docs:
-    title: Documentation
-    permalink: /:path/
-    output: true
 
-defaults:
-  -
-    scope:
-      path: ""
-    values:
-      layout: default
-  -
-    scope:
-      path: ""
-      type: "docs"
-    values:
-      seo:
-        type: Article
-      _comments:
-        category: Group navigation links with this field
-        order: Used to sort links in the navigation
-      _options:
-        content:
-          width: 900
-          height: 2000
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      _comments:
-        type: Marks the impact of this release
+permalink: /:year/:month/:title/
+# Format
+highlighter: rouge
 
-# -----------
-# CloudCannon
+textColor: #FF0000
 
-types:
-  - minor
-  - major
+# supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
+cover_color: clear
+
+# The blog button should not be removed.
+blog_button:
+    title: 博客主页
+
+# Navigation buttons in the front page.s
+nav:
+    - {title: 所有文章, description: archive, url: '/archive'}   
+    - {title: 标签, description: tags, url: '/tags'}      
+    - {title: 关于我, description: about, url: '/about'}      
+    
+
+# Pagination
+gems: [jekyll-paginate,jekyll-sitemap]
+paginate: 20
+paginate_path: "page/:num/"
+
+
