@@ -26,7 +26,6 @@
         <div id="search-result"> %content%</div>
 
     </div>
-
     <div id="footer">
         <div id="navigation"><hr /><p></p></div>
         <div id="footer-last">

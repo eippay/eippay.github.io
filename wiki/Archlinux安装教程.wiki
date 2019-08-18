@@ -15,7 +15,8 @@
         - [[#进入桌面系统#配置vim|6.3 配置vim]]
         - [[#进入桌面系统#配置桌面|6.4 配置桌面]]
         - [[#进入桌面系统#安装chromium|6.5 安装chromium]]
-        - [[#进入桌面系统#安装Emacs|6.6 安装Emacs]]
+        - [[#进入桌面系统#来源|6.6 来源]]
+        - [[#进入桌面系统#讨论|6.7 讨论]]
 
 = 准备 =
 # 了解自己显卡是哪家产的（NVIDIA、ATI、Intel）
@@ -457,6 +458,12 @@ nm-applet &
 {{{sh
 $ sudo pacman -S chromium fcitx-im
 }}}
-== 安装Emacs ==
+== 来源 ==
+1) http://blog.csdn.net/eastmoon502136/article/details/10044993
+2) http://baike.baidu.com/item/xorg?fr=aladdin
+3) http://www.cnblogs.com/liangml/p/5969404.html
+4) http://blog.sina.com.cn/s/blog_69e5d8400102vidy.html
+5) http://www.cnblogs.com/spaces/p/3250950.html?utm_source=tuicool
+== 讨论 ==
 
 [[index|<<首页]]

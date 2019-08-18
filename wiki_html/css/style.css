@@ -63,8 +63,8 @@ body {font-family:"Arial", "DejaVu Sans", "Bitstream Vera Sans", "Lucida Sans", 
 }
 #navigation{
     text-align: left;
-    height: 55px;
     width: 100%;
+    padding-top:1%;
 }
 #footer-last {
     text-align: center;

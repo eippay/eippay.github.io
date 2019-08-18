@@ -15,34 +15,25 @@ $(document).ready(function(){
 //            }
 //        });
 //    }
-   
+
     var strUrl=window.location.href;
     var arrUrl=strUrl.split("/");
     var strPage=arrUrl[arrUrl.length-1];
 
-    // 添加来必力评论系统
-    if (strPage != "index.html") {
-        $("div#search-result").append("<div id=\"lv-container\" data-id=\"city\" data-uid=\"MTAyMC80NjEzOS8yMjY1MA==\"> <script type=\"text/javascript\"> (function(d, s) { var j, e = d.getElementsByTagName(s)[0]; if (typeof LivereTower === 'function') { return; } j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true; e.parentNode.insertBefore(j, e); })(document, 'script'); </script> </div>");
-    }
 
     if (strPage != "index.html") {
         $("div#search-result").children("p").last().each(function(){
-            var str=$(this).html();
-            var test=str.match('<a href=".*">.*</a>');
-            $("div#navigation").empty();
-            $("div#navigation").append("<hr />");
-            $("div#navigation").children("hr").css("border-top","1px solid #ddd");
-            if (test != null){
-                $(this).append('<a href="index.html" id="index">导航&gt;&gt;</a>');
-                $("div#navigation").append($(this));
-            }else{
-                $("div#navigation").append('<a href="index.html" id="index">&lt;&lt;导航&gt;&gt;</a>');
-            }
+                //$(this).append('<a href="index.html" id="index">导航&gt;&gt;</a>');
+                $("div#navigation").empty();
+                $("div#navigation").append("<hr />");
+                $("div#navigation").append('<a href="index.html" id="index">导航&gt;&gt;</a>');
         });
-    }else{
-        $("div#navigation").css("height","49%");
     }
 
+    // 添加来必力评论系统
+    if ($("div#header").text().replace(/(^\s*)|(\s*$)/g,"") != "FIRSTOY") {
+        $("div#search-result").append("<div id=\"lv-container\" data-id=\"city\" data-uid=\"MTAyMC80NjEzOS8yMjY1MA==\"> <script type=\"text/javascript\"> (function(d, s) { var j, e = d.getElementsByTagName(s)[0]; if (typeof LivereTower === 'function') { return; } j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true; e.parentNode.insertBefore(j, e); })(document, 'script'); </script> </div>");
+    }
 
     // 所有表格第一个单元格背景为灰色
     $("tbody").children().each(function(){
