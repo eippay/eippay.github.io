@@ -1,0 +1,21 @@
+! Xft settings ---------------------------------------------------------------
+
+Xft.dpi: 96
+xpdf.title: PDF
+Xft.antialias: true
+Xft.rgba: rgb
+Xft.hinting: true
+Xft.hintstyle: hintslight
+
+! xterm ----------------------------------------------------------------------
+xterm*scrollBar: true
+xterm*rightScrollBar: true
+
+! English font
+xterm*faceName: DejaVu Sans Mono:antialias=True:pixelsize=14
+! Chinese font
+xterm*faceNameDoublesize: WenQuanYi Micro Hei:pixelsize=14
+
+!简单的几行，解决所有问题。
+
+XTerm*locale: zh_CN.UTF-8

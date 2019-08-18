@@ -1,0 +1,3 @@
+%title FIRSTOY
+
+ | Linux | [[Archlinux安装教程]] |
