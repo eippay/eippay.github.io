@@ -458,7 +458,5 @@ nm-applet &
 $ sudo pacman -S chromium fcitx-im
 }}}
 == 安装Emacs ==
-test
-test
 
 [[index|<<首页]]
