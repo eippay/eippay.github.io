@@ -18,15 +18,74 @@
             <div class="head-left">　</div>
             Archlinux安装教程
             <div class="head-right">
-                <input id="search"/>
-                <img id="search-btn" src="images/search1.png"></img>
+                <input id="search" placeholder="search" />
             </div>
         </div>
  
 
         <div id="search-result"> 
+<div id="目录" class="toc"><h1 id="目录">目录</a></h1></div>
+<ul>
+<li>
+<a href="Archlinux安装教程.html#准备">1 准备</a>
 
-<div id="准备"><h1 id="准备">1 准备</h1></div>
+<li>
+<a href="Archlinux安装教程.html#无线连接">2 无线连接</a>
+
+<li>
+<a href="Archlinux安装教程.html#分区">3 分区</a>
+
+<li>
+<a href="Archlinux安装教程.html#安装系统">4 安装系统</a>
+
+<ul>
+<li>
+<a href="Archlinux安装教程.html#安装系统-安装软件">4.1 安装软件</a>
+
+<li>
+<a href="Archlinux安装教程.html#安装系统-安装显卡驱动">4.2 安装显卡驱动</a>
+
+</ul>
+<li>
+<a href="Archlinux安装教程.html#配置系统">5 配置系统</a>
+
+<ul>
+<li>
+<a href="Archlinux安装教程.html#配置系统-安装开机引导程序">5.1 安装开机引导程序</a>
+
+<li>
+<a href="Archlinux安装教程.html#配置系统-添加用户账户">5.2 添加用户账户</a>
+
+<li>
+<a href="Archlinux安装教程.html#配置系统-配置服务">5.3 配置服务</a>
+
+</ul>
+<li>
+<a href="Archlinux安装教程.html#进入桌面系统">6 进入桌面系统</a>
+
+<ul>
+<li>
+<a href="Archlinux安装教程.html#进入桌面系统-配置wifi">6.1 配置wifi</a>
+
+<li>
+<a href="Archlinux安装教程.html#进入桌面系统-配置 xterm">6.2 配置 xterm</a>
+
+<li>
+<a href="Archlinux安装教程.html#进入桌面系统-配置vim">6.3 配置vim</a>
+
+<li>
+<a href="Archlinux安装教程.html#进入桌面系统-配置桌面">6.4 配置桌面</a>
+
+<li>
+<a href="Archlinux安装教程.html#进入桌面系统-安装chromium">6.5 安装chromium</a>
+
+<li>
+<a href="Archlinux安装教程.html#进入桌面系统-安装Emacs">6.6 安装Emacs</a>
+
+</ul>
+</ul>
+
+<div id="准备"><h1 id="准备" class="header"><a href="#准备">1 准备</a></h1></div>
 <ol>
 <li>
 了解自己显卡是哪家产的（NVIDIA、ATI、Intel）
@@ -50,7 +109,7 @@ Windows使用ImageWriter
 
 </ul>
 </ol>
-<div id="无线连接"><h1 id="无线连接">2 无线连接</h1></div>
+<div id="无线连接"><h1 id="无线连接" class="header"><a href="#无线连接">2 无线连接</a></h1></div>
 <pre sh>
 # wifi-menu           //使用 wifi-menu 调用 netctl 配置 wpa-suplicant
 # ping www.baidu.com  //测试网络连接
@@ -68,7 +127,7 @@ Windows使用ImageWriter
 # ping www.baidu.com         //网络测试
 </pre>
 
-<div id="分区"><h1 id="分区">3 分区</h1></div>
+<div id="分区"><h1 id="分区" class="header"><a href="#分区">3 分区</a></h1></div>
 <pre sh>
 # fdisk /dev/sda
  
@@ -93,8 +152,8 @@ Windows使用ImageWriter
 # lsblk
 </pre>
 
-<div id="安装系统"><h1 id="安装系统">4 安装系统</h1></div>
-<div id="安装系统-安装软件"><h2 id="安装软件">4.1 安装软件</h2></div>
+<div id="安装系统"><h1 id="安装系统" class="header"><a href="#安装系统">4 安装系统</a></h1></div>
+<div id="安装系统-安装软件"><h2 id="安装软件" class="header"><a href="#安装系统-安装软件">4.1 安装软件</a></h2></div>
 <p>
 调整安装源位置，加快软件包下载速度
 </p>
@@ -733,7 +792,7 @@ smplayer
 </tr>
 </table>
 
-<div id="安装系统-安装显卡驱动"><h2 id="安装显卡驱动">4.2 安装显卡驱动</h2></div>
+<div id="安装系统-安装显卡驱动"><h2 id="安装显卡驱动" class="header"><a href="#安装系统-安装显卡驱动">4.2 安装显卡驱动</a></h2></div>
 <p>
 NVIDIA显卡安装xf86-video-nouveau
 </p>
@@ -758,7 +817,7 @@ intel显卡安装xf86-video-intle
 <pre sh>
 # pacstrap /mnt xf86-video-vesa
 </pre>
-<div id="配置系统"><h1 id="配置系统">5 配置系统</h1></div>
+<div id="配置系统"><h1 id="配置系统" class="header"><a href="#配置系统">5 配置系统</a></h1></div>
 <pre sh>
 # genfstab -p /mnt &gt;&gt; /mnt/etc/fstab        // 将分区方式写入到 fstab
 # cat /mnt/etc/fstab
@@ -787,7 +846,7 @@ zh_CN GB2312
 # ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 # hwclock --systohc --utc
 </pre>
-<div id="配置系统-安装开机引导程序"><h2 id="安装开机引导程序">5.1 安装开机引导程序</h2></div>
+<div id="配置系统-安装开机引导程序"><h2 id="安装开机引导程序" class="header"><a href="#配置系统-安装开机引导程序">5.1 安装开机引导程序</a></h2></div>
 <pre sh>
 # mkinitcpio -p linux       //生成镜像内核
 # grub-install /dev/sda     //安装grub引导
@@ -803,7 +862,7 @@ zh_CN GB2312
 # os-prober
 # grub-mkconfig -o /boot/grub/grub.cfg
 </pre>
-<div id="配置系统-添加用户账户"><h2 id="添加用户账户">5.2 添加用户账户</h2></div>
+<div id="配置系统-添加用户账户"><h2 id="添加用户账户" class="header"><a href="#配置系统-添加用户账户">5.2 添加用户账户</a></h2></div>
 <pre sh>
 # useradd -m username
 # passwd username
@@ -933,7 +992,7 @@ Win-r
 </table>
 
 </ul>
-<div id="配置系统-配置服务"><h2 id="配置服务">5.3 配置服务</h2></div>
+<div id="配置系统-配置服务"><h2 id="配置服务" class="header"><a href="#配置系统-配置服务">5.3 配置服务</a></h2></div>
 <pre sh>
 # systemctl enable dhcpcd.service
 # systemctl enable NetworkManager
@@ -942,8 +1001,8 @@ Win-r
 # umount /mnt
 # reboot
 </pre>
-<div id="进入桌面系统"><h1 id="进入桌面系统">6 进入桌面系统</h1></div>
-<div id="进入桌面系统-配置wifi"><h2 id="配置wifi">6.1 配置wifi</h2></div>
+<div id="进入桌面系统"><h1 id="进入桌面系统" class="header"><a href="#进入桌面系统">6 进入桌面系统</a></h1></div>
+<div id="进入桌面系统-配置wifi"><h2 id="配置wifi" class="header"><a href="#进入桌面系统-配置wifi">6.1 配置wifi</a></h2></div>
 <p>
 在任务栏点击连接无线网络图标，如无法连接，则右键点击无线网络图标 =&gt; Edit Connections =&gt; 配置无线网络，然后重新连接。
 </p>
@@ -956,7 +1015,7 @@ Win-e 打开资源管理器，程序在 /usr/share/applications/ 目录中
 Win-r firefox 上网 
 </p>
 
-<div id="进入桌面系统-配置 xterm"><h2 id="配置 xterm">6.2 配置 xterm</h2></div>
+<div id="进入桌面系统-配置 xterm"><h2 id="配置 xterm" class="header"><a href="#进入桌面系统-配置 xterm">6.2 配置 xterm</a></h2></div>
 <p>
 Alt-F2 打开 xterm
 </p>
@@ -973,7 +1032,7 @@ $ cat ~/.Xresources
 $ xrdb -merge ~/.Xresources
 $ echo "xrdb -merge ~/.Xresources" &gt;&gt; .config/openbox/autostart
 </pre>
-<div id="进入桌面系统-配置vim"><h2 id="配置vim">6.3 配置vim</h2></div>
+<div id="进入桌面系统-配置vim"><h2 id="配置vim" class="header"><a href="#进入桌面系统-配置vim">6.3 配置vim</a></h2></div>
 <pre sh>
 $ sudo pacman -S git
 $ mkdir -p ~/.vim/bundle
@@ -1088,7 +1147,7 @@ Bundle 'nicoraffo/conque'
 <p>
 进入vim, 运行 :BundleInstall 安装插件
 </p>
-<div id="进入桌面系统-配置桌面"><h2 id="配置桌面">6.4 配置桌面</h2></div>
+<div id="进入桌面系统-配置桌面"><h2 id="配置桌面" class="header"><a href="#进入桌面系统-配置桌面">6.4 配置桌面</a></h2></div>
 <pre sh>
 $ vim /home/username/.config/openbox/autostart
 =---------------------------------------------=
@@ -1108,44 +1167,27 @@ fcitx &amp;
 nm-applet &amp;
 # cairo-dock &amp;
 </pre>
-<div id="进入桌面系统-安装chromium"><h2 id="安装chromium">6.5 安装chromium</h2></div>
+<div id="进入桌面系统-安装chromium"><h2 id="安装chromium" class="header"><a href="#进入桌面系统-安装chromium">6.5 安装chromium</a></h2></div>
 <pre sh>
 $ sudo pacman -S chromium fcitx-im
 </pre>
-<div id="进入桌面系统-安装Emacs"><h2 id="安装Emacs">6.6 安装Emacs</h2></div>
-<div id="进入桌面系统-评论"><h2 id="评论">评论</h2></div>
-<!-- 来必力City版安装代码 -->
-<div id="lv-container" data-id="city" data-uid="MTAyMC80NjEzOS8yMjY1MA==">
-	<script type="text/javascript">
-   (function(d, s) {
-       var j, e = d.getElementsByTagName(s)[0];
-
-       if (typeof LivereTower === 'function') { return; }
-
-       j = d.createElement(s);
-       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-       j.async = true;
-
-       e.parentNode.insertBefore(j, e);
-   })(document, 'script');
-	</script>
-<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
-</div>
-<!-- City版安装代码已完成 -->
+<div id="进入桌面系统-安装Emacs"><h2 id="安装Emacs" class="header"><a href="#进入桌面系统-安装Emacs">6.6 安装Emacs</a></h2></div>
+<p>
+test
+test
+</p>
 
 <p>
-<a href="index.html">首页</a>
+<a href="index.html">&lt;&lt;首页</a>
 </p>
 </div>
-
-        <div id="volid-cover"> </div>
 
     </div>
 
     <div id="footer">
         <div id="navigation"><hr /><p></p></div>
         <div id="footer-last">
-            <div>最后更改:2018-06-24</div>
+            <div>最后更改:2019-08-19</div>
             <div>本站内容按<a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 许可协议</a>发布，转载请注明出处。</div>
         </div>
     </div>

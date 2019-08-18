@@ -15,9 +15,9 @@ $(document).ready(function(){
             search_result=search_result+"<li class='search-li'><a href=\""+all_titles[i]+".html\">"+all_titles[i]+"</a></li>";
                 result_number=result_number+1;
             }
-            // 当结果多于88个时，增大body大小
+            // 当结果多于88个时，跳出循环(或增大body大小)
             if (result_number > 88){
-                //break;
+                break;
             }
         }
        search_result = search_result + "</ul>"; 

@@ -6,7 +6,7 @@ $(document).ready(function(){
             var str=$(this).html();
             var test=str.match('<a href=".*">.*</a>');
             if (test != null){
-                $(this).append('<a href="index.html" id="index">导航</a>');
+                $(this).append('<a href="index.html" id="index">导航&gt;&gt;</a>');
 
                 //$(this).css("border-top","1px solid #4cbce7");
                 $("div#navigation").empty();
@@ -14,6 +14,11 @@ $(document).ready(function(){
                 $("div#navigation").append($(this));
             }
         });
+    }
+
+    // 添加来必力评论系统
+    if ($("div#header").text().replace(/(^\s*)|(\s*$)/g,"") != "FIRSTOY") {
+        $("div#search-result").append("<div id=\"lv-container\" data-id=\"city\" data-uid=\"MTAyMC80NjEzOS8yMjY1MA==\"> <script type=\"text/javascript\"> (function(d, s) { var j, e = d.getElementsByTagName(s)[0]; if (typeof LivereTower === 'function') { return; } j = d.createElement(s); j.src = 'https://cdn-city.livere.com/js/embed.dist.js'; j.async = true; e.parentNode.insertBefore(j, e); })(document, 'script'); </script> </div>");
     }
 
     // 所有表格第一个单元格背景为灰色

@@ -18,15 +18,12 @@
             <div class="head-left">　</div>
             %title%
             <div class="head-right">
-                <input id="search"/>
-                <img id="search-btn" src="images/search1.png"></img>
+                <input id="search" placeholder="search" />
             </div>
         </div>
  
 
         <div id="search-result"> %content%</div>
-
-        <div id="volid-cover"> </div>
 
     </div>
 
